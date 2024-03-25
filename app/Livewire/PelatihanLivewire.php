@@ -6,8 +6,12 @@ use Livewire\Component;
 
 class PelatihanLivewire extends Component
 {
+    public $searchModul;
     public function render()
     {
-        return view('livewire.pelatihan-livewire');
+        $searchModul = '%'.$this->searchModul.'%';
+        return view('livewire.pelatihan-livewire',[
+            'moduls' => ['Test','Test2','Test3','Test4','Test5', 'Test6']
+        ]);
     }
 }
